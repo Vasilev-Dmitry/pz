@@ -5,6 +5,20 @@
 A = int(input("Введите число A: "))
 B = int(input("Введите число B: "))
 
+while type(A) != int:
+    try:
+        A = int(A)
+    except ValueError:
+        print("Неправильно ввели!")
+        A = input("Введите число A: ")
+
+while type(B) != int:
+    try:
+        B = int(B)
+    except ValueError:
+        print("Неправильно ввели!")
+        B = input("Введите число B: ")
+
 # Сумма квадратов от A до B
 sum_squares = 0
 for i in range(A, B + 1):

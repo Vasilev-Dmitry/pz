@@ -10,4 +10,12 @@ def draw_stars(m):
         print("*" * i)
 
 m = int(input("Введите число m: "))
+
+while type(m) != int:
+    try:
+        m = int(m)
+    except ValueError:
+        print("Неправильно ввели!")
+        m = input("Введите число m: ")
+
 draw_stars(m)

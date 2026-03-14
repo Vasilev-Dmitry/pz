@@ -15,6 +15,27 @@ K = int(input("Введите число K: "))
 D1 = int(input("Введите цифру D1 (1–9): "))
 D2 = int(input("Введите цифру D2 (1–9): "))
 
+while type(K) != int:
+    try:
+        K = int(K)
+    except ValueError:
+        print("Неправильно ввели!")
+        K = input("Введите число K: ")
+
+while type(D1) != int:
+    try:
+        D1 = int(D1)
+    except ValueError:
+        print("Неправильно ввели!")
+        D1 = input("Введите цифру D1 (1–9): ")
+
+while type(D2) != int:
+    try:
+        D2 = int(D2)
+    except ValueError:
+        print("Неправильно ввели!")
+        D2 = input("Введите цифру D2 (1–9): ")
+
 # Добавление первой цифры
 K = AddLeftDigit(D1, K)
 print("После добавления D1:", K)

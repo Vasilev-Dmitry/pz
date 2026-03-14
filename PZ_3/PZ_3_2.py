@@ -11,6 +11,20 @@
 number_length = int(input("Введите номер единицы длины (1–5): "))
 length = float(input("Введите длину отрезка: "))
 
+while type(number_length) != int:
+    try:
+        number_length = int(number_length)
+    except ValueError:
+        print("Неправильно ввели!")
+        number_length = input("Введите номер единицы длины (1–5): ")
+
+while type(length) != float:
+    try:
+        length = float(length)
+    except ValueError:
+        print("Неправильно ввели!")
+        length = input("Введите длину отрезка: ")
+
 # Перевод в метры
 if number_length == 1:        # дециметр
     result = length / 10
